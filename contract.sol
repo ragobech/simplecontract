@@ -1,9 +1,7 @@
 pragma solidity ^0.8.4;
 
 // contract that sends to recipient based on cap
-
 contract SendMoneyContract{
- 
  
  mapping(address => uint) public Balance;
  
@@ -13,7 +11,6 @@ contract SendMoneyContract{
     owner = msg.sender;
     moneyBalance[msg.sender] = 50;
  }
- 
  
  function sendMoney(address _to, uint _amount) public returns(bool) {
     require(msg.sender = owner; "You are not allowed");
@@ -25,3 +22,4 @@ contract SendMoneyContract{
     emit moneySent(msg.sender, _to, _amount);
     return true;
  }
+}
